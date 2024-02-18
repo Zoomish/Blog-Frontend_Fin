@@ -1,5 +1,6 @@
-import { Navbar } from 'flowbite-react';
-import { Link } from 'react-router-dom'
+import { Navbar, TextInput } from 'flowbite-react';
+import { Link } from 'react-router-dom';
+import { AiOutlineSearch } from 'react-icons/ai';
 
 export default function Header() {
   return (
@@ -10,6 +11,13 @@ export default function Header() {
         </span>
         Blog
       </Link>
+      <form>
+        <TextInput
+        type='text'
+        placeholder='Search'
+        rightIcon={AiOutlineSearch}
+        />
+      </form>
     </Navbar>
   )
 }
