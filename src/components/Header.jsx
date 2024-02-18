@@ -33,7 +33,25 @@ export default function Header() {
             Sign In
           </Button>
         </Link>
+        <Navbar.Toggle/>
       </div>
+      <Navbar.Collapse>
+          <Navbar.Link>
+            <Link to='/'>
+              Home
+            </Link>
+          </Navbar.Link>
+          <Navbar.Link>
+            <Link to='/about'>
+              About
+            </Link>
+          </Navbar.Link>
+          <Navbar.Link>
+            <Link to='/projects'>
+              Projects
+            </Link>
+          </Navbar.Link>
+        </Navbar.Collapse>
     </Navbar>
   )
 }
