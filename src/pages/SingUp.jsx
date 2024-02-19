@@ -11,7 +11,7 @@ export default function SingUp() {
             </span>
             Blog
           </Link>
-          <p className="">
+          <p className="text-gray-500 text-sm mt-5">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti repudiandae cupiditate blanditiis dignissimos incidunt laudantium recusandae fugiat unde illum, eos, velit architecto soluta ipsum enim hic ipsam accusantium vel quos!
           </p>
         </div>
