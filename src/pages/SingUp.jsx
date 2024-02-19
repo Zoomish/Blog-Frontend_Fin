@@ -19,7 +19,7 @@ export default function SingUp() {
         </div>
         {/* right */}
         <div className="">
-          <form>
+          <form className="flex flex-col gap-4">
             <div>
               <Label value='Your username' />
               <TextInput
