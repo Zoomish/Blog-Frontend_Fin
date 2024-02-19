@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
 import { Button, Label, TextInput } from 'flowbite-react';
+import { useState } from "react";
 
 export default function SingUp() {
+  const [formData, detFormData] = useState({})
   const handleChange = () => {
     console.log('handleChange');
   }
