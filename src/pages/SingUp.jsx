@@ -4,7 +4,7 @@ import { Label, TextInput } from 'flowbite-react';
 export default function SingUp() {
   return (
     <div className='min-h-screen mt-20'>
-      <div className="flex p-3 max-w-3xl justify-between mx-auto flex-col md:flex-row md:items-center">
+      <div className="flex p-3 max-w-3xl justify-between mx-auto flex-col md:flex-row md:items-center gap-5">
         {/* left */}
         <div className="flex-1">
           <Link to='/' className='font-bold dark:text-white text-4xl'>
