@@ -47,8 +47,13 @@ export default function SingUp() {
                 required
               />
             </div>
-            <Button gradientDuoTone='purpleToBlue' type="submit">Sign Up</Button>
+            <Button gradientDuoTone='purpleToPink' type="submit">Sign Up</Button>
           </form>
+          <div>
+            <p className="text-gray-500 text-sm mt-5">
+              Already have an account? <Link to='/signin' className="text-blue-500">Sign In</Link>
+            </p>
+          </div>
         </div>
       </div >
       SingUp
