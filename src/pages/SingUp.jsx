@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export default function SingUp() {
   return (
     <div className='min-h-screen mt-20'>
-      <div className="flex p-3 max-w-3xl justify-between mx-auto flex-col md:flex-row">
+      <div className="flex p-3 max-w-3xl justify-between mx-auto flex-col md:flex-row md:items-center">
         {/* left */}
         <div className="">
           <Link to='/' className='font-bold dark:text-white text-4xl'>
