@@ -29,6 +29,24 @@ export default function SingUp() {
                 required
               />
             </div>
+            <div>
+              <Label value='Your email' />
+              <TextInput
+                type='text'
+                name='email'
+                placeholder='Email'
+                required
+              />
+            </div>
+            <div>
+              <Label value='Your password' />
+              <TextInput
+                type='password'
+                name='password'
+                placeholder='Password'
+                required
+              />
+            </div>
           </form>
         </div>
       </div >
