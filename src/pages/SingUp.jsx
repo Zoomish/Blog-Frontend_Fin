@@ -9,7 +9,17 @@ export default function SingUp() {
   }
   const handleSubmit = async (e) => {
     e.preventDefault()
-    console.log(formData)
+    try {
+      const res = await fetch('/api/auth/signup', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      })
+    } catch (error) {
+      console.log(error)
+    }
   }
   return (
     <div className='min-h-screen mt-20'>
