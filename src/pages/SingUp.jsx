@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export default function SingUp() {
   return (
     <div className='min-h-screen mt-20'>
-      <div className="flex p-3 max-w-3xl justify-between mx-auto">
+      <div className="flex p-3 max-w-3xl justify-between mx-auto flex-col md:flex-row">
         {/* left */}
         <div className="">
           <Link to='/' className='font-bold dark:text-white text-4xl'>
@@ -13,15 +13,24 @@ export default function SingUp() {
             Blog
           </Link>
           <p className="text-gray-500 text-sm mt-5">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti repudiandae cupiditate blanditiis dignissimos incidunt laudantium recusandae fugiat unde illum, eos, velit architecto soluta ipsum enim hic ipsam accusantium vel quos!
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
           </p>
         </div>
         {/* right */}
         <div className="">
-
+          <form>
+            <div>
+              <label
+                htmlFor="email"
+                className="mb-1 text-xs sm:text-sm tracking-wide text-gray-600"
+              >
+                Username
+              </label>
+            </div>
+          </form>
         </div>
-      </div>
+      </div >
       SingUp
-    </div>
+    </div >
   )
 }
