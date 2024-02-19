@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import {Label, TextInput } from 'flowbite-react';
+import { Label, TextInput } from 'flowbite-react';
 
 export default function SingUp() {
   return (
