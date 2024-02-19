@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Label, TextInput } from 'flowbite-react';
+import { Button, Label, TextInput } from 'flowbite-react';
 
 export default function SingUp() {
   return (
@@ -47,6 +47,7 @@ export default function SingUp() {
                 required
               />
             </div>
+            <Button gradientDuoTone='purpleToBlue'>Sign Up</Button>
           </form>
         </div>
       </div >
