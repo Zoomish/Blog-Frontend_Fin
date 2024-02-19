@@ -47,7 +47,7 @@ export default function SingUp() {
                 required
               />
             </div>
-            <Button gradientDuoTone='purpleToBlue'>Sign Up</Button>
+            <Button gradientDuoTone='purpleToBlue' >Sign Up</Button>
           </form>
         </div>
       </div >
