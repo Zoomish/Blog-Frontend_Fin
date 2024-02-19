@@ -34,7 +34,7 @@ export default function SingUp() {
               <TextInput
                 type='text'
                 name='email'
-                placeholder='Email'
+                placeholder='test@gmail.com'
                 required
               />
             </div>
