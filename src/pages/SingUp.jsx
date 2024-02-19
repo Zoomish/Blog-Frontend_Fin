@@ -32,7 +32,7 @@ export default function SingUp() {
             <div>
               <Label value='Your email' />
               <TextInput
-                type='text'
+                type='email'
                 name='email'
                 placeholder='test@gmail.com'
                 required
