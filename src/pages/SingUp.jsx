@@ -20,12 +20,13 @@ export default function SingUp() {
         <div className="">
           <form>
             <div>
-              <label
-                htmlFor="email"
-                className="mb-1 text-xs sm:text-sm tracking-wide text-gray-600"
-              >
-                Username
-              </label>
+              <Label value='Your username' />
+              <TextInput
+                type='text'
+                name='username'
+                placeholder='Username'
+                required
+              />
             </div>
           </form>
         </div>
