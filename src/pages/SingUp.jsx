@@ -80,7 +80,6 @@ export default function SingUp() {
           </div>
         </div>
       </div >
-      SingUp
     </div >
   )
 }
