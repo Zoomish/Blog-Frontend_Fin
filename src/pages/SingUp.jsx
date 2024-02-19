@@ -7,6 +7,10 @@ export default function SingUp() {
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.id]: e.target.value })
   }
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    console.log(formData)
+  }
   return (
     <div className='min-h-screen mt-20'>
       <div className="flex p-3 max-w-3xl justify-between mx-auto flex-col md:flex-row md:items-center gap-5">
@@ -24,7 +28,7 @@ export default function SingUp() {
         </div>
         {/* right */}
         <div className="flex-1">
-          <form className="flex flex-col gap-4">
+          <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
             <div>
               <Label value='Your username' />
               <TextInput
