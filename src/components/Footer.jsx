@@ -1,5 +1,5 @@
 import { Footer } from 'flowbite-react'
-import { FaGithub } from 'react-icons/fa'
+import { FaGithub, FaLinkedin, FaTelegram } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 
 export default function FooterComponent() {
@@ -73,8 +73,10 @@ export default function FooterComponent() {
                 <div>
                     <Footer.Copyright href="https://github.com/Zoomish" by="Zoomish" year={new Date().getFullYear()} />
                 </div>
-                <div>
+                <div className='mt-5 flex'>
                     <Footer.Icon href="https://github.com/Zoomish" target='_blank' rel='noreferrer noopener' icon={FaGithub} />
+                    <Footer.Icon href="https://github.com/Zoomish" target='_blank' rel='noreferrer noopener' icon={FaLinkedin} />
+                    <Footer.Icon href="https://github.com/Zoomish" target='_blank' rel='noreferrer noopener' icon={FaTelegram} />
                 </div>
             </div>
         </Footer>
