@@ -17,7 +17,7 @@ export default function FooterComponent() {
                     <div className='gird grid-cols-2 gap-3 sm:mt-4 sm:gird-cols-4 sm:gap-6'>
                         <Footer.Title title="About" />
                         <Footer.LinkGroup col>
-                            <Footer.Link href="/about" target='_blank'>About</Footer.Link>
+                            <Footer.Link href="/about" target='_blank' rel='noreferrer noopener'>About</Footer.Link>
                         </Footer.LinkGroup>
                     </div>
                 </div>
