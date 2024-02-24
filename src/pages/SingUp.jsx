@@ -28,6 +28,7 @@ export default function SingUp() {
       if (data.success === false) {
         return setErrorMessage(data.message)
       }
+      setLoading(false)
     } catch (error) {
       setErrorMessage(error.message)
       console.log(error)
