@@ -23,6 +23,9 @@ export default function SingUp() {
         body: JSON.stringify(formData)
       })
       const data = await res.json()
+      if (data.success === false) {
+        setErrorMessage(data.message)
+      }
     } catch (error) {
       console.log(error)
     }
