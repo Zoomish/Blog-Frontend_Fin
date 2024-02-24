@@ -14,7 +14,7 @@ export default function FooterComponent() {
                             Blog
                         </Link>
                     </div>
-                    <div className='gird grid-cols-2 gap-8 mt-4 sm:gird-cols-4 sm:gap-6'>
+                    <div className='grid grid-cols-2 gap-8 mt-4 sm:gird-cols-4 sm:gap-6'>
                         <div>
                             <Footer.Title title="About" />
                             <Footer.LinkGroup col>
@@ -32,7 +32,7 @@ export default function FooterComponent() {
                                 </Footer.Link>
                             </Footer.LinkGroup>
                         </div>
-                        <div className='mt-5'>
+                        <div className=''>
                             <Footer.Title title="Follow me" />
                             <Footer.LinkGroup col>
                                 <Footer.Link
@@ -49,7 +49,7 @@ export default function FooterComponent() {
                                 </Footer.Link>
                             </Footer.LinkGroup>
                         </div>
-                        <div className='mt-5'>
+                        <div className=''>
                             <Footer.Title title="Legal" />
                             <Footer.LinkGroup col>
                                 <Footer.Link
