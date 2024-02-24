@@ -13,7 +13,6 @@ export default function SingUp() {
     e.preventDefault()
     if (!formData.username || !formData.email || !formData.password) {
       return setErrorMessage('Please fill out all fields')
-      
     }
     try {
       const res = await fetch('/api/auth/signup', {
@@ -85,7 +84,7 @@ export default function SingUp() {
           </div>
           {
             errorMessage && (
-              <Alert classname="text-red-500" message={errorMessage} />
+              <Alert classname="mt-5" color={'failure'} message={errorMessage} />
             )
           }
         </div>
