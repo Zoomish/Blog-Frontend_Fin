@@ -70,7 +70,7 @@ export default function FooterComponent() {
                 </div>
                 <Footer.Divider />
                 <div>
-                    <Footer.Copyright href="https://github.com/Zoomish" by="Zoomish" year={new Date().getFullYear()}/>
+                    <Footer.Copyright href="https://github.com/Zoomish" by="Zoomish" year={new Date().getFullYear()} />
                 </div>
             </div>
         </Footer>
