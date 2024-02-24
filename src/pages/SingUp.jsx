@@ -15,6 +15,7 @@ export default function SingUp() {
       return setErrorMessage('Please fill out all fields')
     }
     try {
+      setLoading(true)
       const res = await fetch('/api/auth/signup', {
         method: 'POST',
         headers: {
