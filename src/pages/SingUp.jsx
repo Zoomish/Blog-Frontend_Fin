@@ -87,7 +87,7 @@ export default function SingUp() {
               {loading
                 ? (<>
                   <Spinner size="sm" light={true} />
-                  <span>Loading...</span>
+                  <span className="pl-3">Loading...</span>
                 </>)
                 : 'Sign Up'}
             </Button>
