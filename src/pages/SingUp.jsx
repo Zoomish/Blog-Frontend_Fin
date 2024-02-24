@@ -83,6 +83,9 @@ export default function SingUp() {
               Already have an account? <Link to='/signin' className="text-blue-500">Sign In</Link>
             </p>
           </div>
+          {
+            errorMessage && <p className="text-red-500 text-sm mt-5">{errorMessage}</p>
+          }
         </div>
       </div >
     </div >
