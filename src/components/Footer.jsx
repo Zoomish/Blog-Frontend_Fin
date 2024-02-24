@@ -49,6 +49,23 @@ export default function FooterComponent() {
                                 </Footer.Link>
                             </Footer.LinkGroup>
                         </div>
+                        <div className='mt-5'>
+                            <Footer.Title title="Legal" />
+                            <Footer.LinkGroup col>
+                                <Footer.Link
+                                    href="#"
+                                    target='_blank'
+                                    rel='noreferrer noopener'>
+                                    Privacy Policy
+                                </Footer.Link>
+                                <Footer.Link
+                                    href="#"
+                                    target='_blank'
+                                    rel='noreferrer noopener'>
+                                    Terms & Conditions
+                                </Footer.Link>
+                            </Footer.LinkGroup>
+                        </div>
                     </div>
                 </div>
             </div>
