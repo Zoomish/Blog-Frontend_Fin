@@ -85,7 +85,10 @@ export default function SingUp() {
             </div>
             <Button gradientDuoTone='purpleToPink' type="submit" disabled={loading}>
               {loading
-                ? <Spinner size="sm" light={true} />
+                ? (<>
+                  <Spinner size="sm" light={true} />
+                  <span>Loading...</span>
+                </>)
                 : 'Sign Up'}
             </Button>
           </form>
