@@ -32,7 +32,7 @@ export default function FooterComponent() {
                                 </Footer.Link>
                             </Footer.LinkGroup>
                         </div>
-                        <div>
+                        <div className='mt-5'>
                             <Footer.Title title="Follow me" />
                             <Footer.LinkGroup col>
                                 <Footer.Link
