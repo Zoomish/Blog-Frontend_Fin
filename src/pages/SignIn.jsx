@@ -84,7 +84,7 @@ export default function SingIn() {
                   <Spinner size="sm" light={true} />
                   <span className="pl-3">Loading...</span>
                 </>)
-                : 'Sign Up'}
+                : 'Sign In'}
             </Button>
           </form>
           <div>
