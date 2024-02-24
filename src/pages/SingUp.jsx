@@ -16,6 +16,7 @@ export default function SingUp() {
     }
     try {
       setLoading(true)
+      setErrorMessage(null)
       const res = await fetch('/api/auth/signup', {
         method: 'POST',
         headers: {
