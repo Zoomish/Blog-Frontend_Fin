@@ -32,7 +32,7 @@ export default function SingIn() {
       }
       setLoading(false)
       if (res.ok) {
-        navigate('/signin')
+        navigate('/')
       }
     } catch (error) {
       setErrorMessage(error.message)
