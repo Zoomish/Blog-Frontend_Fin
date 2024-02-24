@@ -24,7 +24,7 @@ export default function SingUp() {
       })
       const data = await res.json()
       if (data.success === false) {
-        setErrorMessage(data.message)
+        return setErrorMessage(data.message)
       }
     } catch (error) {
       console.log(error)
