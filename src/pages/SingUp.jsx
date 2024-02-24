@@ -87,7 +87,9 @@ export default function SingUp() {
           </div>
           {
             errorMessage && (
-              <Alert classname="mt-5" color={'failure'} message={errorMessage} />
+              <Alert classname="mt-5" color={'failure'}>
+                {errorMessage}
+              </Alert>
             )
           }
         </div>
