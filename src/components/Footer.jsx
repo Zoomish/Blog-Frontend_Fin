@@ -68,6 +68,7 @@ export default function FooterComponent() {
                         </div>
                     </div>
                 </div>
+                <Footer.Divider />
             </div>
         </Footer>
     )
