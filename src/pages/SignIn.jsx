@@ -19,7 +19,7 @@ export default function SingIn() {
     try {
       setLoading(true)
       setErrorMessage(null)
-      const res = await fetch('/api/auth/signup', {
+      const res = await fetch('/api/auth/signin', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -58,16 +58,6 @@ export default function SingIn() {
         {/* right */}
         <div className="flex-1">
           <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
-            <div>
-              <Label value='Your username' />
-              <TextInput
-                type='text'
-                id='username'
-                placeholder='Username'
-                onChange={handleChange}
-                required
-              />
-            </div>
             <div>
               <Label value='Your email' />
               <TextInput
