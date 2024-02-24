@@ -4,6 +4,8 @@ import { useState } from "react";
 
 export default function SingUp() {
   const [formData, setFormData] = useState({})
+  const [errorMessage, setErrorMessage] = useState(null)
+  
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.id]: e.target.value })
   }
