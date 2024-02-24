@@ -14,8 +14,8 @@ export default function FooterComponent() {
                             Blog
                         </Link>
                     </div>
-                    <div>
-                        
+                    <div className='gird grid-cols-2 gap-3 sm:mt-4 sm:gird-cols-4 sm:gap-6'>
+
                     </div>
                 </div>
             </div>
