@@ -13,7 +13,7 @@ export default function SingIn() {
   }
   const handleSubmit = async (e) => {
     e.preventDefault()
-    if (!formData.username || !formData.email || !formData.password) {
+    if (!formData.email || !formData.password) {
       return setErrorMessage('Please fill out all fields')
     }
     try {
