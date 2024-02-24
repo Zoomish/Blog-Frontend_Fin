@@ -11,6 +11,10 @@ export default function SingUp() {
   }
   const handleSubmit = async (e) => {
     e.preventDefault()
+    if (!formData.username || !formData.email || !formData.password) {
+      return setErrorMessage('Please fill out all fields')
+      
+    }
     try {
       const res = await fetch('/api/auth/signup', {
         method: 'POST',
