@@ -32,6 +32,23 @@ export default function FooterComponent() {
                                 </Footer.Link>
                             </Footer.LinkGroup>
                         </div>
+                        <div>
+                            <Footer.Title title="Follow me" />
+                            <Footer.LinkGroup col>
+                                <Footer.Link
+                                    href="https://github.com/Zoomish"
+                                    target='_blank'
+                                    rel='noreferrer noopener'>
+                                    GitHub
+                                </Footer.Link>
+                                <Footer.Link
+                                    href="https://t.me/Zoom_ent"
+                                    target='_blank'
+                                    rel='noreferrer noopener'>
+                                    Telegram
+                                </Footer.Link>
+                            </Footer.LinkGroup>
+                        </div>
                     </div>
                 </div>
             </div>
