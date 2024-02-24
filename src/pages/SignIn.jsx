@@ -73,7 +73,7 @@ export default function SingIn() {
               <TextInput
                 type='password'
                 id='password'
-                placeholder='*********'
+                placeholder='**********'
                 onChange={handleChange}
                 required
               />
@@ -84,9 +84,14 @@ export default function SingIn() {
                   <Spinner size="sm" light={true} />
                   <span className="pl-3">Loading...</span>
                 </>)
-                : 'Sign In'}
+                : 'Sign Up'}
             </Button>
           </form>
+          <div>
+            <p className="text-gray-500 text-sm mt-5">
+              Don&apos;t have an account? <Link to='/signup' className="text-blue-500">Sign Up</Link>
+            </p>
+          </div>
           {
             errorMessage && (
               <Alert classname="mt-5" color={'failure'}>
