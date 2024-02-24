@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Alert, Button, Label, Spinner, TextInput } from 'flowbite-react';
 import { useState } from "react";
 
@@ -6,6 +6,8 @@ export default function SingUp() {
   const [formData, setFormData] = useState({})
   const [errorMessage, setErrorMessage] = useState(null)
   const [loading, setLoading] = useState(false)
+  const navigate = useNavigate()
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.id]: e.target.value.trim() })
   }
@@ -29,6 +31,9 @@ export default function SingUp() {
         return setErrorMessage(data.message)
       }
       setLoading(false)
+      if (res.ok) {
+        navigate('/signin')
+      }
     } catch (error) {
       setErrorMessage(error.message)
       console.log(error)
