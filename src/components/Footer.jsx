@@ -75,7 +75,7 @@ export default function FooterComponent() {
                 </div>
                 <div className='mt-5 flex'>
                     <Footer.Icon href="https://github.com/Zoomish" target='_blank' rel='noreferrer noopener' icon={FaGithub} />
-                    <Footer.Icon href="https://github.com/Zoomish" target='_blank' rel='noreferrer noopener' icon={FaLinkedin} />
+                    <Footer.Icon href="#" target='_blank' rel='noreferrer noopener' icon={FaLinkedin} />
                     <Footer.Icon href="https://t.me/Zoom_ent" target='_blank' rel='noreferrer noopener' icon={FaTelegram} />
                 </div>
             </div>
