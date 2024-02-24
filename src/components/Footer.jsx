@@ -14,6 +14,9 @@ export default function FooterComponent() {
                             Blog
                         </Link>
                     </div>
+                    <div>
+                        
+                    </div>
                 </div>
             </div>
         </Footer>
