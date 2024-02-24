@@ -27,6 +27,7 @@ export default function SingUp() {
         return setErrorMessage(data.message)
       }
     } catch (error) {
+      setErrorMessage(error.message)
       console.log(error)
     }
   }
