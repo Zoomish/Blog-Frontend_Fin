@@ -18,10 +18,20 @@ export default function FooterComponent() {
                         <div>
                             <Footer.Title title="About" />
                             <Footer.LinkGroup col>
-                                <Footer.Link href="/about" target='_blank' rel='noreferrer noopener'>About</Footer.Link>
+                                <Footer.Link
+                                    href="/about"
+                                    target='_blank'
+                                    rel='noreferrer noopener'>
+                                    About
+                                </Footer.Link>
+                                <Footer.Link
+                                    href="/about"
+                                    target='_blank'
+                                    rel='noreferrer noopener'>
+                                    About
+                                </Footer.Link>
                             </Footer.LinkGroup>
                         </div>
-
                     </div>
                 </div>
             </div>
