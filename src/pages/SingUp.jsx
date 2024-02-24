@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Button, Label, TextInput } from 'flowbite-react';
+import { Alert, Button, Label, TextInput } from 'flowbite-react';
 import { useState } from "react";
 
 export default function SingUp() {
@@ -84,7 +84,9 @@ export default function SingUp() {
             </p>
           </div>
           {
-            errorMessage && <p className="text-red-500 text-sm mt-5">{errorMessage}</p>
+            errorMessage && (
+              <Alert classname="text-red-500" message={errorMessage} />
+            )
           }
         </div>
       </div >
