@@ -71,7 +71,11 @@ export default function FooterComponent() {
                 </div>
                 <Footer.Divider />
                 <div className='sm:flex sm:items-center sm:justify-between w-full'>
-                    <Footer.Copyright href="https://github.com/Zoomish" by="Zoomish" year={new Date().getFullYear()} />
+                    <Footer.Copyright
+                        href="https://github.com/Zoomish"
+                        by="Zoomish"
+                        year={new Date().getFullYear()}
+                    />
                     <div className='mt-5 flex gap-6 sm:mt-0 sm:justify-center'>
                         <Footer.Icon href="https://github.com/Zoomish" target='_blank' rel='noreferrer noopener' icon={FaGithub} />
                         <Footer.Icon href="#" target='_blank' rel='noreferrer noopener' icon={FaLinkedin} />
