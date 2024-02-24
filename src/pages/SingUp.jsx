@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Alert, Button, Label, TextInput } from 'flowbite-react';
+import { Alert, Button, Label, Spinner, TextInput } from 'flowbite-react';
 import { useState } from "react";
 
 export default function SingUp() {
@@ -84,7 +84,9 @@ export default function SingUp() {
               />
             </div>
             <Button gradientDuoTone='purpleToPink' type="submit" disabled={loading}>
-              Sign Up
+              {loading
+                ? <Spinner size="sm" light={true} />
+                : 'Sign Up'}
             </Button>
           </form>
           <div>
