@@ -32,6 +32,7 @@ export default function SingUp() {
     } catch (error) {
       setErrorMessage(error.message)
       console.log(error)
+      setLoading(false)
     }
   }
   return (
