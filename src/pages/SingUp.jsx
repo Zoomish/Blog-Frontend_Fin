@@ -7,7 +7,7 @@ export default function SingUp() {
   const [errorMessage, setErrorMessage] = useState(null)
   const [loading, setLoading] = useState(false)
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.id]: e.target.value })
+    setFormData({ ...formData, [e.target.id]: e.target.value.trim() })
   }
   const handleSubmit = async (e) => {
     e.preventDefault()
