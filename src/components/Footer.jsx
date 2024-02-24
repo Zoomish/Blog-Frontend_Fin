@@ -73,7 +73,7 @@ export default function FooterComponent() {
                 <div className='sm:flex sm:items-center sm:justify-between w-full'>
                     <Footer.Copyright
                         href="https://github.com/Zoomish"
-                        className=''
+                        className='text-center'
                         by="Zoomish"
                         year={new Date().getFullYear()}
                     />
