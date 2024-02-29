@@ -5,7 +5,7 @@ import Projects from './pages/Projects'
 import SignIn from './pages/SignIn'
 import SingUp from './pages/SingUp'
 import Dashboard from './pages/Dashboard'
-import Header from './components/header'
+import Header from './components/Header'
 import FooterComponent from './components/Footer'
 
 export default function App() {
