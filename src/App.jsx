@@ -8,11 +8,10 @@ import Dashboard from './pages/Dashboard'
 import Header from './components/header'
 import FooterComponent from './components/Footer'
 
-
 export default function App() {
   return (
     <BrowserRouter>
-    <Header/>
+      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -21,7 +20,7 @@ export default function App() {
         <Route path="/signup" element={<SingUp />} />
         <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
-      <FooterComponent/>
+      <FooterComponent />
     </BrowserRouter>
   )
 }
