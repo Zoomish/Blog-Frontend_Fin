@@ -21,7 +21,7 @@ export const userSlice = createSlice({
             state.loading = false
             state.error = action.payload
         },
-        logout: (state) => {
+        signOut: (state) => {
             state.currentUser = null
         }
     }
