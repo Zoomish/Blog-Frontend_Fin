@@ -20,8 +20,7 @@ export default function SingIn() {
       return setErrorMessage('Please fill out all fields')
     }
     try {
-      setLoading(true)
-      setErrorMessage(null)
+      dispatch(signInStart())
       const res = await fetch('/api/auth/signin', {
         method: 'POST',
         headers: {
