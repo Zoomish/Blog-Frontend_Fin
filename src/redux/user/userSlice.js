@@ -6,7 +6,7 @@ const initialState = {
     error: null
 }
 
-export const userSlice = createSlice({
+const userSlice = createSlice({
     name: 'user',
     initialState,
     reducers: {
@@ -26,3 +26,5 @@ export const userSlice = createSlice({
         }
     }
 })
+
+export const { signInStart, signInSuccess, signInFailed, signOut } = userSlice.actions
