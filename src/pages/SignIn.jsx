@@ -34,6 +34,7 @@ export default function SingIn() {
       }
       setLoading(false)
       if (res.ok) {
+        dispatch(signInSuccess(data))
         navigate('/')
       }
     } catch (error) {
