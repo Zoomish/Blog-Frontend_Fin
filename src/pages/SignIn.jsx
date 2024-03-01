@@ -30,7 +30,7 @@ export default function SingIn() {
       })
       const data = await res.json()
       if (data.success === false) {
-        return setErrorMessage(data.message)
+        dispatch(signInFailed(data.message))
       }
       setLoading(false)
       if (res.ok) {
