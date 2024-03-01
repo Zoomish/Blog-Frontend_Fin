@@ -5,7 +5,7 @@ import { signInStart, signInSuccess, signInFailed } from "../redux/user/userSlic
 import { useDispatch, useSelector } from "react-redux";
 export default function SingIn() {
   const [formData, setFormData] = useState({})
-  const { loading, error: errorMessage, currentUser } = useSelector(state => state.user)
+  const { loading, error: errorMessage } = useSelector(state => state.user)
   const dispatch = useDispatch()
   const navigate = useNavigate()
 
