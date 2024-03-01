@@ -5,8 +5,7 @@ import { signInStart, signInSuccess, signInFailed } from "../redux/user/userSlic
 import { useDispatch, useSelector } from "react-redux";
 export default function SingIn() {
   const [formData, setFormData] = useState({})
-  const [errorMessage, setErrorMessage] = useState(null)
-  const [loading, setLoading] = useState(false)
+  const { loading, error: errorMessage, currentUser } = useSelector(state => state.user)
   const dispatch = useDispatch()
   const navigate = useNavigate()
 
@@ -16,7 +15,7 @@ export default function SingIn() {
   const handleSubmit = async (e) => {
     e.preventDefault()
     if (!formData.email || !formData.password) {
-      return setErrorMessage('Please fill out all fields')
+      return dispatch(signInFailed('Please fill out all fields'))
     }
     try {
       dispatch(signInStart())
