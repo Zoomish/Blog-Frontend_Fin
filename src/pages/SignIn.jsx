@@ -30,7 +30,6 @@ export default function SingIn() {
       if (data.success === false) {
         dispatch(signInFailed(data.message))
       }
-      setLoading(false)
       if (res.ok) {
         dispatch(signInSuccess(data))
         navigate('/')
