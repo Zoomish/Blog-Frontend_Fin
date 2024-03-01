@@ -38,9 +38,7 @@ export default function SingIn() {
         navigate('/')
       }
     } catch (error) {
-      setErrorMessage(error.message)
-      console.log(error)
-      setLoading(false)
+      dispatch(signInFailed(error.message))
     }
   }
   return (
