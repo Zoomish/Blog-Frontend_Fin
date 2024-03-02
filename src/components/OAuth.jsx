@@ -22,6 +22,9 @@ export default function OAuth() {
                     googlePhotoUrl: result.user.photoURL
                 })
             })
+            if (res.ok) {
+                window.location.reload()
+            }
         }catch (error) {
         console.log(error);
     }
