@@ -6,6 +6,10 @@ const rootReducer = CombineReducers({
     user: userReducer
 })
 
+const persistConfig = {
+    key: 'root',
+}
+
 const persistedReducer = persistReducer(persistConfig)
 
 export const store = configureStore({
