@@ -1,9 +1,10 @@
 import { Button } from 'flowbite-react';
 import { AiFillGoogleCircle } from 'react-icons/ai';
 import { GoogleAuthProvider, getAuth, signInWithPopup } from 'firebase/auth';
+import { app } from '../firebase';
 
 export default function OAuth() {
-    const auth = getAuth();
+    const auth = getAuth(app);
 
     const handleGoogleClick = async () => {
         const provider = new GoogleAuthProvider();
