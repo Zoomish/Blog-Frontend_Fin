@@ -6,9 +6,7 @@ const rootReducer = CombineReducers({
     user: userReducer
 })
 
-const persistedReducer = persistReducer({
-    key: 'root',
-})
+const persistedReducer = persistReducer(persistConfig)
 
 export const store = configureStore({
     reducer: {
