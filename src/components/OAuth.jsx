@@ -25,9 +25,10 @@ export default function OAuth() {
                     googlePhotoUrl: result.user.photoURL
                 })
             })
+            const data = await res.json()
             if (res.ok) {
                 window.location.reload()
-                dispatch(signInSuccess(res))
+                dispatch(signInSuccess(data))
             }
         } catch (error) {
             console.log(error);
