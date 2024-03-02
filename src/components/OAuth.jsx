@@ -16,10 +16,13 @@ export default function OAuth() {
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ idToken: result.user.getIdToken() })
+                body: JSON.stringify({
+                    name: result.user.displayName,
+                    email: result.user.email,
+                    googlePhotoUrl: result.user.photoURL
+                })
             })
-        }
-        } catch (error) {
+        }catch (error) {
         console.log(error);
     }
 }
