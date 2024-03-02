@@ -2,13 +2,14 @@ import { Button } from 'flowbite-react';
 import { AiFillGoogleCircle } from 'react-icons/ai';
 import { GoogleAuthProvider, getAuth, signInWithPopup } from 'firebase/auth';
 import { app } from '../firebase';
+import { useDispatch } from "react-redux";
+import { signInSuccess } from '../redux/user/userSlice';
 
 export default function OAuth() {
     const auth = getAuth(app);
     const dispatch = useDispatch()
 
     const handleGoogleClick = async () => {
-        
         const provider = new GoogleAuthProvider();
         provider.setCustomParameters({ prompt: 'select_account' });
         try {
@@ -27,7 +28,6 @@ export default function OAuth() {
             if (res.ok) {
                 window.location.reload()
                 dispatch(signInSuccess(res))
-
             }
         } catch (error) {
             console.log(error);
