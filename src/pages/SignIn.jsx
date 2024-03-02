@@ -3,6 +3,7 @@ import { Alert, Button, Label, Spinner, TextInput } from 'flowbite-react';
 import { useState } from "react";
 import { signInStart, signInSuccess, signInFailed } from "../redux/user/userSlice";
 import { useDispatch, useSelector } from "react-redux";
+import OAuth from "../components/OAuth";
 export default function SingIn() {
   const [formData, setFormData] = useState({})
   const { loading, error: errorMessage } = useSelector(state => state.user)
@@ -84,6 +85,7 @@ export default function SingIn() {
                 </>)
                 : 'Sign In'}
             </Button>
+            <OAuth/>
           </form>
           <div>
             <p className="text-gray-500 text-sm mt-5">
