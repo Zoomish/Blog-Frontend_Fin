@@ -8,6 +8,7 @@ import { signInSuccess } from '../redux/user/userSlice';
 export default function OAuth() {
     const auth = getAuth(app);
     const dispatch = useDispatch()
+    const navigete = useNavigate()
 
     const handleGoogleClick = async () => {
         const provider = new GoogleAuthProvider();
@@ -27,8 +28,8 @@ export default function OAuth() {
             })
             const data = await res.json()
             if (res.ok) {
-                window.location.reload()
                 dispatch(signInSuccess(data))
+                
             }
         } catch (error) {
             console.log(error);
