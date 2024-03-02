@@ -9,7 +9,7 @@ export default function OAuth() {
         const provider = new GoogleAuthProvider();
         provider.setCustomParameters({ prompt: 'select_account' });
         try {
-            await signInWithPopup(auth, provider);
+            const result = await signInWithPopup(auth, provider);
         } catch (error) {
             console.log(error);
         }
