@@ -17,5 +17,5 @@ const persistedReducer = persistReducer(persistConfig, rootReducer)
 
 export const store = configureStore({
     reducer: persistedReducer,
-    middleware: (getDefaultMiddleware) =>
+    middleware: (getDefaultMiddleware) => getDefaultMiddleware
 })
