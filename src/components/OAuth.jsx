@@ -4,7 +4,7 @@ import { AiFillGoogleCircle } from 'react-icons/ai';
 export default function OAuth() {
     return (
         <Button type='button' gradientDuoTone='pinkToOrange' outline>
-            <AiFillGoogleCircle/> Sign in with Google</Button>
+            <AiFillGoogleCircle/> Sign in with Google
         </Button>
     )
 }
