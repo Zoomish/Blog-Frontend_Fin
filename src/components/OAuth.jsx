@@ -11,14 +11,21 @@ export default function OAuth() {
         provider.setCustomParameters({ prompt: 'select_account' });
         try {
             const result = await signInWithPopup(auth, provider);
-            console.log(result);
-        } catch (error) {
-            console.log(error);
+            const res = await fetch('/api/auth/google', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ idToken: result.user.getIdToken() })
+            })
         }
+        } catch (error) {
+        console.log(error);
     }
-    return (
-        <Button type='button' gradientDuoTone='pinkToOrange' outline onClick={handleGoogleClick}>
-            <AiFillGoogleCircle className='w-6 h-6 mr-2' /> Continue with Google
-        </Button>
-    )
+}
+return (
+    <Button type='button' gradientDuoTone='pinkToOrange' outline onClick={handleGoogleClick}>
+        <AiFillGoogleCircle className='w-6 h-6 mr-2' /> Continue with Google
+    </Button>
+)
 }
