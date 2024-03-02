@@ -10,10 +10,10 @@ const rootReducer = CombineReducers({
 const persistConfig = {
     key: 'root',
     storage,
-    whitelist: ['user']
+    version: 1
 }
 
-const persistedReducer = persistReducer(persistConfig)
+const persistedReducer = persistReducer(persistConfig, rootReducer)
 
 export const store = configureStore({
     reducer: {
