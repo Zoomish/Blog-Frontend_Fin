@@ -2,7 +2,7 @@ import { Button } from 'flowbite-react';
 import { AiFillGoogleCircle } from 'react-icons/ai';
 
 export default function OAuth() {
-    const handleGoogleClick = () => {
+    const handleGoogleClick = async () => {
         
     }
     return (
