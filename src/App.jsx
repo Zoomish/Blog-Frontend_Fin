@@ -8,7 +8,6 @@ import Dashboard from './pages/Dashboard'
 import Header from './components/Header'
 import FooterComponent from './components/Footer'
 
-
 export default function App() {
   return (
     <BrowserRouter>
