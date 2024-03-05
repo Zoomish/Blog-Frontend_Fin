@@ -44,6 +44,8 @@ export default function Header() {
               <span className='block text-sm'>@{user.username}</span>
               <span className='block text-sm font-medium truncate'>{user.email}</span>
             </Dropdown.Header>
+            <Link>
+            </Link>
           </Dropdown>
           : <Link to='/signin'>
             <Button gradientDuoTone='purpleToBlue' outline>
