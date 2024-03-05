@@ -7,6 +7,7 @@ import { useSelector} from 'react-redux';
 
 export default function Header() {
   const path = useLocation().pathname
+  const user = useSelector(state => state.user)
   return (
     <Navbar className='border-b-2'>
       <Link to='/' className='items-center whitespace-nowrap text-sm sm:text-xl font-semibold dark:text-white'>
