@@ -38,6 +38,7 @@ export default function Header() {
             label={<Avatar
               alt='user'
               src={user.profilePicture}
+              rounded
             />}>
 
           </Dropdown>
