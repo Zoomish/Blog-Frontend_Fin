@@ -34,7 +34,7 @@ export default function Header() {
         {user
           ? <Dropdown
             arrowIcon={false}
-            label={<Avatar 
+            label={<Avatar
               alt='user'
               src={user.profilePicture}
             />}>
