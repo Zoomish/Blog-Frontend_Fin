@@ -48,9 +48,7 @@ export default function Header() {
               <Dropdown.Item>Profile</Dropdown.Item>
             </Link>
             <Dropdown.Divider />
-            <Link to='/dashboard?tab=settings'>
-              <Dropdown.Item>Settings</Dropdown.Item>
-            </Link>
+            <Dropdown.Item>Sign out</Dropdown.Item>
           </Dropdown>
           : <Link to='/signin'>
             <Button gradientDuoTone='purpleToBlue' outline>
