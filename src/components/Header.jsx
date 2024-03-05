@@ -40,7 +40,6 @@ export default function Header() {
               src={user.profilePicture}
               rounded
             />}>
-
           </Dropdown>
           : <Link to='/signin'>
             <Button gradientDuoTone='purpleToBlue' outline>
