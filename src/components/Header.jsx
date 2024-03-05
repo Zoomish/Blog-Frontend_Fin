@@ -41,7 +41,7 @@ export default function Header() {
               rounded
             />}>
             <Dropdown.Header>
-              <span className='block'>@{user.username}</span>
+              <span className='block text-sm'>@{user.username}</span>
             </Dropdown.Header>
           </Dropdown>
           : <Link to='/signin'>
