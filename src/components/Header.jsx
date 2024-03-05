@@ -34,8 +34,9 @@ export default function Header() {
         {user
           ? <Dropdown
             arrowIcon={false}
-            inline={true}
-            label={<Avatar />}>
+            label={<Avatar 
+              
+            />}>
 
           </Dropdown>
           : <Link to='/signin'>
