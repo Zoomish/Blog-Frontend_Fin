@@ -2,7 +2,7 @@ import { Button, Navbar, TextInput } from 'flowbite-react';
 import { Link, useLocation } from 'react-router-dom';
 import { AiOutlineSearch } from 'react-icons/ai';
 import { FaMoon } from 'react-icons/fa';
-import { useSelector} from 'react-redux';
+import { useSelector } from 'react-redux';
 
 
 export default function Header() {
@@ -25,36 +25,40 @@ export default function Header() {
         />
       </form>
       <Button className='w-12 h-10 lg:hidden' color='grey' pill>
-        <AiOutlineSearch/>
+        <AiOutlineSearch />
       </Button>
       <div className='flex gap-2 md:order-2'>
         <Button className='w-12 h-10 hidden sm:inline' color='grey' pill>
-          <FaMoon/>
+          <FaMoon />
         </Button>
-        <Link to='/signin'>
-          <Button gradientDuoTone='purpleToBlue' outline>
-            Sign In
-          </Button>
-        </Link>
-        <Navbar.Toggle/>
-      </div>
+        {user
+          ? ''
+          : <Link to='/signin'>
+            <Button gradientDuoTone='purpleToBlue' outline>
+              Sign In
+            </Button>
+          </Link>
+        }
+
+        <Navbar.Toggle />
+      </div >
       <Navbar.Collapse>
-          <Navbar.Link active={path === '/'} as={'div'}>
-            <Link to='/'>
-              Home
-            </Link>
-          </Navbar.Link>
-          <Navbar.Link active={path === '/about'} as={'div'}>
-            <Link to='/about'>
-              About
-            </Link>
-          </Navbar.Link>
-          <Navbar.Link active={path === '/projects'} as={'div'}>
-            <Link to='/projects'>
-              Projects
-            </Link>
-          </Navbar.Link>
-        </Navbar.Collapse>
-    </Navbar>
+        <Navbar.Link active={path === '/'} as={'div'}>
+          <Link to='/'>
+            Home
+          </Link>
+        </Navbar.Link>
+        <Navbar.Link active={path === '/about'} as={'div'}>
+          <Link to='/about'>
+            About
+          </Link>
+        </Navbar.Link>
+        <Navbar.Link active={path === '/projects'} as={'div'}>
+          <Link to='/projects'>
+            Projects
+          </Link>
+        </Navbar.Link>
+      </Navbar.Collapse>
+    </Navbar >
   )
 }
