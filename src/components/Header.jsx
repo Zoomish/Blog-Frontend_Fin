@@ -2,12 +2,14 @@ import { Avatar, Button, Dropdown, Navbar, TextInput } from 'flowbite-react';
 import { Link, useLocation } from 'react-router-dom';
 import { AiOutlineSearch } from 'react-icons/ai';
 import { FaMoon } from 'react-icons/fa';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+
 
 
 export default function Header() {
   const path = useLocation().pathname
   const user = useSelector(state => state.user.currentUser)
+  const dispath = useDispatch()
   return (
     <Navbar className='border-b-2'>
       <Link to='/' className='items-center whitespace-nowrap text-sm sm:text-xl font-semibold dark:text-white'>
