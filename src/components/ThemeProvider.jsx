@@ -1,5 +1,6 @@
 import { useSelector } from 'react-redux'
 
+// eslint-disable-next-line react/prop-types
 export default function ThemeProvider({ children }) {
     const theme = useSelector(state => state.theme)
     return (
