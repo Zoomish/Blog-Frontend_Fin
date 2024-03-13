@@ -1,7 +1,7 @@
 import { Avatar, Button, Dropdown, Navbar, TextInput } from 'flowbite-react';
 import { Link, useLocation } from 'react-router-dom';
 import { AiOutlineSearch } from 'react-icons/ai';
-import { FaMoon } from 'react-icons/fa';
+import { FaMoon, FaSun } from 'react-icons/fa';
 import { useSelector, useDispatch } from 'react-redux';
 import { toggleTheme } from '../redux/theme/themeSlice';
 
@@ -33,7 +33,7 @@ export default function Header() {
       </Button>
       <div className='flex gap-2 md:order-2'>
         <Button className='w-12 h-10 hidden sm:inline' color='grey' pill onClick={() => dispath(toggleTheme())}>
-          <FaMoon />
+          {theme === 'light' ? <FaSun /> : <FaMoon />}
         </Button>
         {user
           ? <Dropdown
