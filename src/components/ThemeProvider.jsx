@@ -2,7 +2,7 @@ import { useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
 
 export default function ThemeProvider({ children }) {
-    const theme = useSelector(state => state.theme);
+    const theme = useSelector(state => state.theme.theme);
 
     return (
         <div className={theme}>
