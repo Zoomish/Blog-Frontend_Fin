@@ -1,5 +1,5 @@
 import { Sidebar } from 'flowbite-react'
-import { HiUSer } from 'react-icons/hi'
+import { HiArrowSmRight, HiUSer } from 'react-icons/hi'
 
 export default function DashSidebar() {
     return (
@@ -7,7 +7,7 @@ export default function DashSidebar() {
             <Sidebar.Items>
                 <Sidebar.ItemGroup>
                     <Sidebar.Item active icon={HiUSer} label={'User'} labelColor='dark'>Profile</Sidebar.Item>
-                    <Sidebar.Item href='/dashboard?tab=profile' icon={true}>Profile</Sidebar.Item>
+                    <Sidebar.Item active icon={HiArrowSmRight} label={'User'} labelColor='dark'>Sign Out</Sidebar.Item>
                 </Sidebar.ItemGroup>
             </Sidebar.Items>
         </Sidebar>
