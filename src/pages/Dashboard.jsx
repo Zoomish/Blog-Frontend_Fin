@@ -10,6 +10,11 @@ export default function Dashboard() {
     console.log(tabFromUrl);
   }, [location.search])
   return (
-    <div>Dashboard</div>
+    <div>
+      <div>
+      {/* 'Sidebar' */}
+      </div>
+      
+    </div>
   )
 }
