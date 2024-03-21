@@ -8,7 +8,7 @@ export default function Dashboard() {
     const urlParams = new URLSearchParams(location.search)
     const tabFromUrl = urlParams.get('tab')
     console.log(tabFromUrl);
-  }, [location])
+  }, [location.search])
   return (
     <div>Dashboard</div>
   )
