@@ -1,7 +1,7 @@
-import React from 'react'
+import { useSelector } from 'react-redux'
+import { Outlet } from 'react-router-dom'
 
 export default function PrivateRouter() {
-    return (
-        <div>PrivateRouter</div>
-    )
+    const { currentUser } = useSelector(state => state.user)
+    return currentUser ? <Outlet /> : null
 }
