@@ -12,9 +12,9 @@ export default function Dashboard() {
   return (
     <div>
       <div>
-      {/* 'Sidebar' */}
+        {/* 'Sidebar' */}
       </div>
-      
+      {/* Profile and etc */}
     </div>
   )
 }
