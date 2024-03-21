@@ -6,7 +6,7 @@ export default function DashSidebar() {
         <Sidebar>
             <Sidebar.Items>
                 <Sidebar.ItemGroup>
-                    <Sidebar.Item active icon={HiUSer}>Dashboard</Sidebar.Item>
+                    <Sidebar.Item active icon={HiUSer} label={'User'}>Profile</Sidebar.Item>
                     <Sidebar.Item href='/dashboard?tab=profile' icon={true}>Profile</Sidebar.Item>
                 </Sidebar.ItemGroup>
             </Sidebar.Items>
