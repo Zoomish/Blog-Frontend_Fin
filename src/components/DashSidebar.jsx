@@ -7,7 +7,7 @@ export default function DashSidebar() {
             <Sidebar.Items>
                 <Sidebar.ItemGroup>
                     <Sidebar.Item active icon={HiUser} label={'User'} labelColor='dark'>Profile</Sidebar.Item>
-                    <Sidebar.Item active icon={HiArrowSmRight} label={'User'} labelColor='dark'>Sign Out</Sidebar.Item>
+                    <Sidebar.Item active icon={HiArrowSmRight}>Sign Out</Sidebar.Item>
                 </Sidebar.ItemGroup>
             </Sidebar.Items>
         </Sidebar>
