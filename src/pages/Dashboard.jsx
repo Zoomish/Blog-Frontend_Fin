@@ -14,13 +14,13 @@ export default function Dashboard() {
     }
   }, [location.search])
   return (
-    <div>
+    <div className='min-h-screen'>
       <div>
         {/* 'Sidebar' */}
         <DashSidebar />
       </div>
       {/* Profile and etc */}
-      { tab === 'profile' && <DashProfile />}
+      {tab === 'profile' && <DashProfile />}
     </div>
   )
 }
