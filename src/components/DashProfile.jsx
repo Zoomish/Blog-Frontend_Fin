@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux'
-import { TextInput } from 'flowbite-react'
+import { Button, TextInput } from 'flowbite-react'
 
 export default function DashProfile() {
     const { currentUser } = useSelector(state => state.user)
@@ -13,7 +13,7 @@ export default function DashProfile() {
                 <TextInput type='text' id='username' placeholder='Username' defaultValue={currentUser.username} />
                 <TextInput type='email' id='email' placeholder='Email' defaultValue={currentUser.email} />
                 <TextInput type='password' id='password' placeholder='Password' />
-                <Button gradientDuoTone='purpleToPink' type="submit">Save</Button>
+                <Button gradientDuoTone='purpleToBlue' type="submit">Save</Button>
             </form>
         </div>
     )
