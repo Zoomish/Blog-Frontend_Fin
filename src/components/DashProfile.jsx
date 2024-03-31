@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux'
 import { Button, TextInput } from 'flowbite-react'
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 export default function DashProfile() {
     const { currentUser } = useSelector(state => state.user)
@@ -15,6 +15,17 @@ export default function DashProfile() {
             setImageFileUrl(URL.createObjectURL(file))
         }
     }
+    useEffect(() => {
+        if (imageFile) {
+            const reader = new FileReader()
+            reader.onload = () => {
+                if (reader.readyState === 2) {
+                    setImageFileUrl(reader.result)
+                }
+            }
+            reader.readAsDataURL(imageFile)
+        }
+    }, [imageFile])
 
     return (
         <div className="max-w-lg mx-auto p-3 w-full">
