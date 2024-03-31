@@ -17,15 +17,15 @@ export default function DashProfile() {
     }
     useEffect(() => {
         if (imageFile) {
-            const reader = new FileReader()
-            reader.onload = () => {
-                if (reader.readyState === 2) {
-                    setImageFileUrl(reader.result)
-                }
-            }
-            reader.readAsDataURL(imageFile)
+            uploadImage()
         }
     }, [imageFile])
+
+    const uploadImage = async () => {
+        const formData = new FormData()
+        formData.append('file', imageFile)
+        formData.append('upload_preset', 'zoomish')
+    }
 
     return (
         <div className="max-w-lg mx-auto p-3 w-full">
