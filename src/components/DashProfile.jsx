@@ -15,7 +15,7 @@ export default function DashProfile() {
                 <TextInput type='password' id='password' placeholder='Password' />
                 <Button gradientDuoTone='purpleToBlue' type="submit" outline>Save</Button>
             </form>
-            <div className="mt-5 text-red-500">
+            <div className="mt-5 text-red-500 flex justify-between">
                 <span className="cursor-pointer">Delete account</span>
                 <span className="cursor-pointer">Sign out</span>
             </div>
