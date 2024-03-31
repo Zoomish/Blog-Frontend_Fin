@@ -1,11 +1,12 @@
 import { useSelector } from 'react-redux'
 import { Button, TextInput } from 'flowbite-react'
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 
 export default function DashProfile() {
     const { currentUser } = useSelector(state => state.user)
     const [imageFile, setImageFile] = useState(null)
     const [imageFileUrl, setImageFileUrl] = useState(null)
+    const filePickerRef = useRef(null)
 
     const handleImageChange = (e) => {
         const file = e.target.files[0]
