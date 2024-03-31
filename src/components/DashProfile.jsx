@@ -15,6 +15,9 @@ export default function DashProfile() {
                 <TextInput type='password' id='password' placeholder='Password' />
                 <Button gradientDuoTone='purpleToBlue' type="submit">Save</Button>
             </form>
+            <div className="mt-5">
+                <span></span>
+            </div>
         </div>
     )
 }
