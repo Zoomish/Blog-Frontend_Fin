@@ -44,6 +44,9 @@ export default function DashProfile() {
             (snapshot) => {
                 const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100
                 setImageFileUplaodProgress(progress.toFixed(0))
+            },
+            (error) => {
+                
             }
         )
     }
