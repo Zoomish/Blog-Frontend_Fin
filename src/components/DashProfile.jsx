@@ -4,7 +4,7 @@ export default function DashProfile() {
     const { currentUser } = useSelector(state => state.user)
     return (
         <div className="max-w-lg mx-auto p-3 w-full">
-            <h1>Profule</h1>
+            <h1>Profile</h1>
             <form className="flex flex-col">
                 <div className="self-center w-32 h-32 cursor-pointer shadow-md overflow-hidden rounded-full">
                     <img src={currentUser.profilePicture} alt="User" className="rounded-full object-cover w-full h-full border-8 border-[lightgray]" />
