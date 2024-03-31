@@ -35,7 +35,7 @@ export default function DashProfile() {
         //     }
         //   }
         const storage = getStorage(app)
-        const fileName = imageFile.name
+        const fileName = new Date().getTime() + imageFile.name
     }
 
     return (
