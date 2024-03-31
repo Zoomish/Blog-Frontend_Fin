@@ -2,6 +2,7 @@ import { useSelector } from 'react-redux'
 import { Button, TextInput } from 'flowbite-react'
 import { useEffect, useRef, useState } from 'react'
 import { getStorage } from 'firebase/storage'
+import { app } from '../firebase'
 
 export default function DashProfile() {
     const { currentUser } = useSelector(state => state.user)
@@ -33,7 +34,7 @@ export default function DashProfile() {
         //       }
         //     }
         //   }
-        const storage = getStorage()
+        const storage = getStorage(app)
     }
 
     return (
