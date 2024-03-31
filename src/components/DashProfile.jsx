@@ -12,7 +12,7 @@ export default function DashProfile() {
                 </div>
                 <TextInput type='text' id='username' placeholder='Username' defaultValue={currentUser.username} />
                 <TextInput type='email' id='email' placeholder='Email' defaultValue={currentUser.email} />
-                <TextInput type='password' id='password' placeholder='Password' defaultValue={currentUser.username} />
+                <TextInput type='password' id='password' placeholder='Password' />
             </form>
         </div>
     )
