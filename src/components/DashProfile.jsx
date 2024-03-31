@@ -13,9 +13,9 @@ export default function DashProfile() {
                 <TextInput type='text' id='username' placeholder='Username' defaultValue={currentUser.username} />
                 <TextInput type='email' id='email' placeholder='Email' defaultValue={currentUser.email} />
                 <TextInput type='password' id='password' placeholder='Password' />
-                <Button gradientDuoTone='purpleToBlue' type="submit">Save</Button>
+                <Button gradientDuoTone='purpleToBlue' type="submit" outline>Save</Button>
             </form>
-            <div className="mt-5">
+            <div className="mt-5 text-red-500">
                 <span>Delete account</span>
             </div>
         </div>
