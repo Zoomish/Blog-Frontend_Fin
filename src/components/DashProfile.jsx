@@ -6,7 +6,9 @@ export default function DashProfile() {
         <div>
             <h1>Profule</h1>
             <form>
-                <img src={currentUser.profilePicture} alt="User" className="w-32 h-32 rounded-full" />
+                <div className="flex justify-center w-32 h-32 ">
+                    <img src={currentUser.profilePicture} alt="User" className="rounded-full" />
+                </div>
             </form>
         </div>
     )
