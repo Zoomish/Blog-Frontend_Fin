@@ -16,7 +16,7 @@ export default function DashProfile() {
                 <Button gradientDuoTone='purpleToBlue' type="submit">Save</Button>
             </form>
             <div className="mt-5">
-                <span></span>
+                <span>Delete account</span>
             </div>
         </div>
     )
