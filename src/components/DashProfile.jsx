@@ -17,6 +17,7 @@ export default function DashProfile() {
             </form>
             <div className="mt-5 text-red-500">
                 <span>Delete account</span>
+                <span>Sign out</span>
             </div>
         </div>
     )
