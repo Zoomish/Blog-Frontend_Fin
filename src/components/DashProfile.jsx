@@ -41,7 +41,7 @@ export default function DashProfile() {
         uploadTask.on(
             'state_changed',
             (snapshot) => {
-                
+                const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100
             }
         )
     }
