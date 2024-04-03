@@ -5,12 +5,12 @@ import { initializeApp } from 'firebase/app';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
-  authDomain: 'zoomish-blog.firebaseapp.com',
-  projectId: 'zoomish-blog',
-  storageBucket: 'zoomish-blog.appspot.com',
-  messagingSenderId: '45177378750',
-  appId: '1:45177378750:web:8049926d651e63ce02cbef',
+    apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+    authDomain: 'zoomish-blog.firebaseapp.com',
+    projectId: 'zoomish-blog',
+    storageBucket: 'zoomish-blog.appspot.com',
+    messagingSenderId: '45177378750',
+    appId: '1:45177378750:web:8049926d651e63ce02cbef',
 };
 
 // Initialize Firebase

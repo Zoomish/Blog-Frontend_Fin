@@ -8,13 +8,13 @@ import { PersistGate } from 'redux-persist/integration/react';
 import ThemeProvider from './components/ThemeProvider.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <PersistGate loading={null} persistor={persistor}>
-    <Provider store={store}>
-      <React.StrictMode>
-        <ThemeProvider>
-          <App />
-        </ThemeProvider>
-      </React.StrictMode>
-    </Provider>
-  </PersistGate>
+    <PersistGate loading={null} persistor={persistor}>
+        <Provider store={store}>
+            <React.StrictMode>
+                <ThemeProvider>
+                    <App />
+                </ThemeProvider>
+            </React.StrictMode>
+        </Provider>
+    </PersistGate>
 );
