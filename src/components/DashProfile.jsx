@@ -18,7 +18,6 @@ export default function DashProfile() {
     const [imageFileUplaodProgress, setImageFileUplaodProgress] =
         useState(null);
     const [imageFileUplaodError, setImageFileUplaodError] = useState(null);
-    console.log(imageFileUrl, imageFileUplaodProgress, imageFileUplaodError);
     const filePickerRef = useRef(null);
 
     const handleImageChange = (e) => {
@@ -59,7 +58,6 @@ export default function DashProfile() {
             },
             (error) => {
                 setImageFileUplaodError('Error while uploading image');
-                console.log(error);
                 setImageFileUplaodProgress(null);
                 setImageFileUrl(null)
             },
