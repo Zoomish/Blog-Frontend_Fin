@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux'
 import { Button, TextInput } from 'flowbite-react'
 import { useEffect, useRef, useState } from 'react'
-import { getStorage, ref, uploadBytesResumable } from 'firebase/storage'
+import { getDownloadURL, getStorage, ref, uploadBytesResumable } from 'firebase/storage'
 import { app } from '../firebase'
 
 export default function DashProfile() {
@@ -49,6 +49,11 @@ export default function DashProfile() {
             (error) => {
                 setImageFileUplaodError('Error while uploading image')
                 console.log(error)
+            },
+            () => {
+                getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
+                    setImageFileUrl(downloadURL)
+                })
             }
         )
     }
