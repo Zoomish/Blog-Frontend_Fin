@@ -25,6 +25,7 @@ export default function DashProfile() {
         const file = e.target.files[0];
         if (file) {
             setImageFile(file);
+            setImageFileUrl(URL.createObjectURL(file));
         }
     };
     useEffect(() => {
