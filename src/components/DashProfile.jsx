@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux'
-import { Button, TextInput } from 'flowbite-react'
+import { Alert, Button, TextInput } from 'flowbite-react'
 import { useEffect, useRef, useState } from 'react'
 import { getDownloadURL, getStorage, ref, uploadBytesResumable } from 'firebase/storage'
 import { app } from '../firebase'
@@ -68,6 +68,7 @@ export default function DashProfile() {
                 <div className="self-center w-32 h-32 cursor-pointer shadow-md overflow-hidden rounded-full" onClick={() => filePickerRef.current.click()}>
                     <img src={imageFileUrl || currentUser.profilePicture} alt="User" className="rounded-full object-cover w-full h-full border-8 border-[lightgray]" />
                 </div>
+                {imageFileUplaodError && <Alert color='failure'>{imageFileUplaodError}</Alert>}
                 <TextInput type='text' id='username' placeholder='Username' defaultValue={currentUser.username} />
                 <TextInput type='email' id='email' placeholder='Email' defaultValue={currentUser.email} />
                 <TextInput type='password' id='password' placeholder='Password' />
