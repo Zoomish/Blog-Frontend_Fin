@@ -80,23 +80,23 @@ export default function DashProfile() {
                     ref={filePickerRef}
                     hidden
                 />
-                {imageFileUplaodProgress && (
-                    <CircularProgressbar
-                        value={imageFileUplaodProgress || 0}
-                        text={`${imageFileUplaodProgress}%`}
-                        strokeWidth={5}
-                        styles={{
-                            root: {
-                                width: '100%',
-                                height: '100%',
-                            },
-                        }}
-                    />
-                )}
                 <div
                     className="self-center w-32 h-32 cursor-pointer shadow-md overflow-hidden rounded-full"
                     onClick={() => filePickerRef.current.click()}
                 >
+                    {imageFileUplaodProgress && (
+                        <CircularProgressbar
+                            value={imageFileUplaodProgress || 0}
+                            text={`${imageFileUplaodProgress}%`}
+                            strokeWidth={5}
+                            styles={{
+                                root: {
+                                    width: '100%',
+                                    height: '100%',
+                                },
+                            }}
+                        />
+                    )}
                     <img
                         src={imageFileUrl || currentUser.profilePicture}
                         alt="User"
