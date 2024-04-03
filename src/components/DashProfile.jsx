@@ -60,6 +60,8 @@ export default function DashProfile() {
             (error) => {
                 setImageFileUplaodError('Error while uploading image');
                 console.log(error);
+                setImageFileUplaodProgress(null);
+                setImageFileUrl(currentUser.profilePicture)
             },
             () => {
                 getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
