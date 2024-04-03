@@ -41,6 +41,7 @@ export default function DashProfile() {
         const fileName = new Date().getTime() + imageFile.name
         const storageRef = ref(storage, fileName)
         const uploadTask = uploadBytesResumable(storageRef, imageFile)
+        setImageFileUplaodError(null)
         uploadTask.on(
             'state_changed',
             (snapshot) => {
