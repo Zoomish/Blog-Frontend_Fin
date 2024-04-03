@@ -9,7 +9,6 @@ import FooterComponent from './components/Footer'
 import Header from './components/Header'
 import PrivateRouter from './components/PrivateRouter'
 
-
 export default function App() {
   return (
     <BrowserRouter>
