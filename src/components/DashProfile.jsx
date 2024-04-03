@@ -97,6 +97,9 @@ export default function DashProfile() {
                                     top: 0,
                                     left: 0
                                 },
+                                path: {
+                                    stroke: 'lightgray'
+                                }
                             }}
                         />
                     )}
