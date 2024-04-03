@@ -95,18 +95,18 @@ export default function DashProfile() {
                                     height: '100%',
                                     position: 'absolute',
                                     top: 0,
-                                    left: 0
+                                    left: 0,
                                 },
                                 path: {
-                                    stroke: `rgba(62, 152, 199, ${imageFileUplaodProgress / 100})`
-                                }
+                                    stroke: `rgba(62, 152, 199, ${imageFileUplaodProgress / 100})`,
+                                },
                             }}
                         />
                     )}
                     <img
                         src={imageFileUrl || currentUser.profilePicture}
                         alt="User"
-                        className="rounded-full object-cover w-full h-full border-8 border-[lightgray]"
+                        className={`rounded-full object-cover w-full h-full border-8 border-[lightgray] ${imageFileUplaodProgress && imageFileUplaodProgress < 100 ? 'opacity-0' : 'opacity-100'}`}
                     />
                 </div>
                 {imageFileUplaodError && (
