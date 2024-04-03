@@ -86,6 +86,12 @@ export default function DashProfile() {
                             value={imageFileUplaodProgress || 0}
                             text={`${imageFileUplaodProgress}%`}
                             strokeWidth={5}
+                            styles={{
+                                root: {
+                                    width: '100%',
+                                    height: '100%',
+                                }
+                            }}
                         />
                     </div>
                 )}
