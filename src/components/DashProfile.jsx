@@ -61,7 +61,7 @@ export default function DashProfile() {
                 setImageFileUplaodError('Error while uploading image');
                 console.log(error);
                 setImageFileUplaodProgress(null);
-                setImageFileUrl(currentUser.profilePicture)
+                setImageFileUrl(null)
             },
             () => {
                 getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
