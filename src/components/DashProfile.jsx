@@ -81,7 +81,7 @@ export default function DashProfile() {
                     hidden
                 />
                 <div
-                    className="self-center w-32 h-32 cursor-pointer shadow-md overflow-hidden rounded-full"
+                    className="relative self-center w-32 h-32 cursor-pointer shadow-md overflow-hidden rounded-full"
                     onClick={() => filePickerRef.current.click()}
                 >
                     {imageFileUplaodProgress && (
