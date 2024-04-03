@@ -1,15 +1,15 @@
-import { useSelector } from "react-redux";
-import { Alert, Button, TextInput } from "flowbite-react";
-import { useEffect, useRef, useState } from "react";
+import { useSelector } from 'react-redux';
+import { Alert, Button, TextInput } from 'flowbite-react';
+import { useEffect, useRef, useState } from 'react';
 import {
   getDownloadURL,
   getStorage,
   ref,
   uploadBytesResumable,
-} from "firebase/storage";
-import { app } from "../firebase";
-import { CircularProgressbar } from "react-circular-progressbar";
-import "react-circular-progressbar/dist/styles.css";
+} from 'firebase/storage';
+import { app } from '../firebase';
+import { CircularProgressbar } from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css';
 
 export default function DashProfile() {
   const { currentUser } = useSelector((state) => state.user);
@@ -50,14 +50,14 @@ export default function DashProfile() {
     const uploadTask = uploadBytesResumable(storageRef, imageFile);
     setImageFileUplaodError(null);
     uploadTask.on(
-      "state_changed",
+      'state_changed',
       (snapshot) => {
         const progress =
           (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
         setImageFileUplaodProgress(progress.toFixed(0));
       },
       (error) => {
-        setImageFileUplaodError("Error while uploading image");
+        setImageFileUplaodError('Error while uploading image');
         console.log(error);
       },
       () => {
