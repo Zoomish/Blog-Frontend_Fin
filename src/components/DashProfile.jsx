@@ -81,19 +81,17 @@ export default function DashProfile() {
                     hidden
                 />
                 {imageFileUplaodProgress && (
-                    <div className="w-10 h-10 mx-auto my-5">
-                        <CircularProgressbar
-                            value={imageFileUplaodProgress || 0}
-                            text={`${imageFileUplaodProgress}%`}
-                            strokeWidth={5}
-                            styles={{
-                                root: {
-                                    width: '100%',
-                                    height: '100%',
-                                }
-                            }}
-                        />
-                    </div>
+                    <CircularProgressbar
+                        value={imageFileUplaodProgress || 0}
+                        text={`${imageFileUplaodProgress}%`}
+                        strokeWidth={5}
+                        styles={{
+                            root: {
+                                width: '100%',
+                                height: '100%',
+                            },
+                        }}
+                    />
                 )}
                 <div
                     className="self-center w-32 h-32 cursor-pointer shadow-md overflow-hidden rounded-full"
