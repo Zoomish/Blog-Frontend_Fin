@@ -85,6 +85,7 @@ export default function DashProfile() {
                         <CircularProgressbar
                             value={imageFileUplaodProgress || 0}
                             text={`${imageFileUplaodProgress}%`}
+                            strokeWidth={5}
                         />
                     </div>
                 )}
