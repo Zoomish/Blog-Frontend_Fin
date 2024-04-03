@@ -47,7 +47,8 @@ export default function DashProfile() {
                 setImageFileUplaodProgress(progress.toFixed(0))
             },
             (error) => {
-                
+                setImageFileUplaodError('Error while uploading image')
+                console.log(error)
             }
         )
     }
