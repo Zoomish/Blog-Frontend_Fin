@@ -10,7 +10,11 @@ import {
 import { app } from '../firebase';
 import { CircularProgressbar } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
-import { updateFailed, updateStart, updateSuccess } from '../redux/user/userSlice';
+import {
+    updateFailed,
+    updateStart,
+    updateSuccess,
+} from '../redux/user/userSlice';
 
 export default function DashProfile() {
     const { currentUser } = useSelector((state) => state.user);
@@ -75,6 +79,9 @@ export default function DashProfile() {
         if (Object.keys(formData).length === 0) {
             return;
         }
+        if (imageFileUplaoding) {
+            return;
+        }
         try {
             dispath(updateStart());
             const res = await fetch(`/api/user/update/${currentUser._id}`, {
@@ -88,8 +95,7 @@ export default function DashProfile() {
             if (!res.ok) {
                 dispath(updateFailed(data.message));
                 return;
-            }
-            else{
+            } else {
                 dispath(updateSuccess(data));
                 setFormData({});
             }
