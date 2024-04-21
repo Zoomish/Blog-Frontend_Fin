@@ -115,17 +115,20 @@ export default function DashProfile() {
                     id="username"
                     placeholder="Username"
                     defaultValue={currentUser.username}
+                    onChange={handleChange}
                 />
                 <TextInput
                     type="email"
                     id="email"
                     placeholder="Email"
                     defaultValue={currentUser.email}
+                    onChange={handleChange}
                 />
                 <TextInput
                     type="password"
                     id="password"
                     placeholder="Password"
+                    onChange={handleChange}
                 />
                 <Button gradientDuoTone="purpleToBlue" type="submit" outline>
                     Save
