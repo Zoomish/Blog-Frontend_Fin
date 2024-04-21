@@ -23,6 +23,7 @@ export default function DashProfile() {
     const [imageFileUplaoding, setImageFileUploading] = useState(false);
     const [formData, setFormData] = useState({});
     const [updateUserSuccess, setUpdateUserSuccess] = useState(null);
+    const [updateUserError, setUpdateUserError] = useState(null);
     const [imageFileUplaodProgress, setImageFileUplaodProgress] =
         useState(null);
     const [imageFileUplaodError, setImageFileUplaodError] = useState(null);
@@ -72,6 +73,8 @@ export default function DashProfile() {
     };
 
     const handleChange = (e) => {
+        setUpdateUserSuccess(null);
+        setUpdateUserError(null);
         setFormData({ ...formData, [e.target.id]: e.target.value });
     };
 
