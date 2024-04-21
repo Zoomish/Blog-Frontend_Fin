@@ -81,6 +81,7 @@ export default function DashProfile() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         if (Object.keys(formData).length === 0) {
+            setUpdateUserError('Nothing to update');
             return;
         }
         if (imageFileUplaoding) {
