@@ -81,6 +81,7 @@ export default function DashProfile() {
                 },
                 body: JSON.stringify(formData),
             });
+            const data = await res.json();
         } catch (error) {
             dispath(updateFailed(error));
         }
