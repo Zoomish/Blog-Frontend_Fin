@@ -179,7 +179,7 @@ export default function DashProfile() {
                 <span className="cursor-pointer">Sign out</span>
             </div>
             {updateUserSuccess && (
-                <Alert color="success">{updateUserSuccess}</Alert>
+                <Alert color="success" className='mt-5'>{updateUserSuccess}</Alert>
             )}
         </div>
     );
