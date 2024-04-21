@@ -64,12 +64,16 @@ export default function DashProfile() {
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.id]: e.target.value });
     };
-    console.log(formData);
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log(formData);
+    }
 
     return (
         <div className="max-w-lg mx-auto p-3 w-full">
             <h1 className="my-7 text-center font-semibold text-3xl">Profile</h1>
-            <form className="flex flex-col gap-4">
+            <form onSubmit={handleSubmit} className="flex flex-col gap-4">
                 <input
                     type="file"
                     accept="image/*"
