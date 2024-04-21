@@ -67,13 +67,20 @@ export default function DashProfile() {
         setFormData({ ...formData, [e.target.id]: e.target.value });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         if (Object.keys(formData).length === 0) {
             return;
         }
         try {
             dispath(updateStart());
+            const res = await fetch('/api/auth/update', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
         } catch (error) {
             dispath(updateFailed(error));
         }
