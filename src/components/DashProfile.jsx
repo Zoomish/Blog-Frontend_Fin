@@ -79,6 +79,8 @@ export default function DashProfile() {
     };
 
     const handleSubmit = async (e) => {
+        setUpdateUserSuccess(null);
+        setUpdateUserError(null);
         e.preventDefault();
         if (Object.keys(formData).length === 0) {
             setUpdateUserError('Nothing to update');
