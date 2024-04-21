@@ -98,6 +98,7 @@ export default function DashProfile() {
                 return;
             } else {
                 dispath(updateSuccess(data));
+                setUpdateUserSuccess('Profile updated successfully');
                 setFormData({});
             }
         } catch (error) {
