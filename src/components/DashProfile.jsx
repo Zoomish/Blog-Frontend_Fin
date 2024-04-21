@@ -56,7 +56,7 @@ export default function DashProfile() {
                     (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
                 setImageFileUplaodProgress(progress.toFixed(0));
             },
-            (error) => {
+            () => {
                 setImageFileUplaodError('Error while uploading image');
                 setImageFileUplaodProgress(null);
                 setImageFileUrl(null)
