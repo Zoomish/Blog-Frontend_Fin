@@ -178,6 +178,9 @@ export default function DashProfile() {
                 <span className="cursor-pointer">Delete account</span>
                 <span className="cursor-pointer">Sign out</span>
             </div>
+            {updateUserSuccess && (
+                <Alert color="success">{updateUserSuccess}</Alert>
+            )}
         </div>
     );
 }
