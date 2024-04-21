@@ -95,6 +95,7 @@ export default function DashProfile() {
             }
         } catch (error) {
             dispath(updateFailed(error));
+            setImageFileUploading(false);
         }
     };
 
