@@ -24,6 +24,9 @@ const userSlice = createSlice({
         signOut: (state) => {
             state.currentUser = null;
         },
+        updateStart: (state) => {
+            state.loading = true;
+        }
     },
 });
 
