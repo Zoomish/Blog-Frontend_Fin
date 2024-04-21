@@ -15,7 +15,7 @@ export default function DashProfile() {
     const { currentUser } = useSelector((state) => state.user);
     const [imageFile, setImageFile] = useState(null);
     const [imageFileUrl, setImageFileUrl] = useState(null);
-    const [formData, setFormData] = useState(null);
+    const [formData, setFormData] = useState({});
     const [imageFileUplaodProgress, setImageFileUplaodProgress] =
         useState(null);
     const [imageFileUplaodError, setImageFileUplaodError] = useState(null);
@@ -50,16 +50,22 @@ export default function DashProfile() {
             () => {
                 setImageFileUplaodError('Error while uploading image');
                 setImageFileUplaodProgress(null);
-                setImageFileUrl(null)
+                setImageFileUrl(null);
             },
             () => {
                 getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
                     setImageFileUrl(downloadURL);
                     setFormData({ ...formData, profilePicture: downloadURL });
+                    onChange = { handleChange };
                 });
             }
         );
     };
+
+    const handleChange = (e) => {
+        setFormData({ ...formData, [e.target.id]: e.target.value.trim() });
+    };
+    console.log(formData);
 
     return (
         <div className="max-w-lg mx-auto p-3 w-full">
