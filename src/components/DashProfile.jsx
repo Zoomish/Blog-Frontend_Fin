@@ -180,14 +180,10 @@ export default function DashProfile() {
                     onChange={handleChange}
                 />
                 {updateUserSuccess && (
-                    <Alert color="success">
-                        {updateUserSuccess}
-                    </Alert>
+                    <Alert color="success">{updateUserSuccess}</Alert>
                 )}
                 {updateUserError && (
-                    <Alert color="failure">
-                        {updateUserError}
-                    </Alert>
+                    <Alert color="failure">{updateUserError}</Alert>
                 )}
                 <Button gradientDuoTone="purpleToBlue" type="submit" outline>
                     Save
