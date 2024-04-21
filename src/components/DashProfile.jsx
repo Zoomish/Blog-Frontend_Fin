@@ -1,4 +1,4 @@
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { Alert, Button, TextInput } from 'flowbite-react';
 import { useEffect, useRef, useState } from 'react';
 import {
@@ -20,6 +20,7 @@ export default function DashProfile() {
         useState(null);
     const [imageFileUplaodError, setImageFileUplaodError] = useState(null);
     const filePickerRef = useRef(null);
+    const dispath = useDispatch();
 
     const handleImageChange = (e) => {
         const file = e.target.files[0];
@@ -71,11 +72,8 @@ export default function DashProfile() {
             return;
         }
         try {
-            
-        } catch (error) {
-            
-        }
-    }
+        } catch (error) {}
+    };
 
     return (
         <div className="max-w-lg mx-auto p-3 w-full">
