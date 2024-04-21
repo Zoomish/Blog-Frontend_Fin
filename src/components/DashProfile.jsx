@@ -170,6 +170,11 @@ export default function DashProfile() {
                     placeholder="Password"
                     onChange={handleChange}
                 />
+                {updateUserSuccess && (
+                    <Alert color="success" className="mt-5">
+                        {updateUserSuccess}
+                    </Alert>
+                )}
                 <Button gradientDuoTone="purpleToBlue" type="submit" outline>
                     Save
                 </Button>
@@ -178,9 +183,6 @@ export default function DashProfile() {
                 <span className="cursor-pointer">Delete account</span>
                 <span className="cursor-pointer">Sign out</span>
             </div>
-            {updateUserSuccess && (
-                <Alert color="success" className='mt-5'>{updateUserSuccess}</Alert>
-            )}
         </div>
     );
 }
