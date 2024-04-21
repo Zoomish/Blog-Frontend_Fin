@@ -67,7 +67,14 @@ export default function DashProfile() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(formData);
+        if (Object.keys(formData).length === 0) {
+            return;
+        }
+        try {
+            
+        } catch (error) {
+            
+        }
     }
 
     return (
