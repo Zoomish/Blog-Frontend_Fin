@@ -10,7 +10,7 @@ import {
 import { app } from '../firebase';
 import { CircularProgressbar } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
-import { updateFailed, updateStart } from '../redux/user/userSlice';
+import { updateFailed, updateStart, updateSuccess } from '../redux/user/userSlice';
 
 export default function DashProfile() {
     const { currentUser } = useSelector((state) => state.user);
@@ -82,6 +82,14 @@ export default function DashProfile() {
                 body: JSON.stringify(formData),
             });
             const data = await res.json();
+            if (!res.ok) {
+                dispath(updateFailed(data.message));
+                return;
+            }
+            else{
+                dispath(updateSuccess(data));
+                setFormData({});
+            }
         } catch (error) {
             dispath(updateFailed(error));
         }
