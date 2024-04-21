@@ -84,6 +84,7 @@ export default function DashProfile() {
             return;
         }
         if (imageFileUplaoding) {
+            setUpdateUserError('Please wait while image is uploading');
             return;
         }
         try {
@@ -176,6 +177,11 @@ export default function DashProfile() {
                 {updateUserSuccess && (
                     <Alert color="success" className="mt-5">
                         {updateUserSuccess}
+                    </Alert>
+                )}
+                {updateUserError && (
+                    <Alert color="error" className="mt-5">
+                        {updateUserError}
                     </Alert>
                 )}
                 <Button gradientDuoTone="purpleToBlue" type="submit" outline>
