@@ -74,8 +74,8 @@ export default function DashProfile() {
         }
         try {
             dispath(updateStart());
-            const res = await fetch(`/api/auth/update/${currentUser._id}`, {
-                method: 'POST',
+            const res = await fetch(`/api/user/update/${currentUser._id}`, {
+                method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
                 },
