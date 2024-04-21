@@ -38,6 +38,7 @@ export default function DashProfile() {
     }, [imageFile]);
 
     const uploadImage = async () => {
+        setImageFileUploading(true);
         const storage = getStorage(app);
         const fileName = new Date().getTime() + imageFile.name;
         const storageRef = ref(storage, fileName);
