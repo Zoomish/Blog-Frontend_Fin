@@ -99,6 +99,7 @@ export default function DashProfile() {
             const data = await res.json();
             if (!res.ok) {
                 dispath(updateFailed(data.message));
+                setUpdateUserError(data.message);
                 return;
             } else {
                 dispath(updateSuccess(data));
@@ -107,6 +108,7 @@ export default function DashProfile() {
             }
         } catch (error) {
             dispath(updateFailed(error));
+            setUpdateUserError(error);
             setImageFileUploading(false);
         }
     };
