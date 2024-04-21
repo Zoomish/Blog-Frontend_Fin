@@ -178,12 +178,12 @@ export default function DashProfile() {
                     onChange={handleChange}
                 />
                 {updateUserSuccess && (
-                    <Alert color="success" className="mt-5">
+                    <Alert color="success">
                         {updateUserSuccess}
                     </Alert>
                 )}
                 {updateUserError && (
-                    <Alert color="error" className="mt-5">
+                    <Alert color="failure">
                         {updateUserError}
                     </Alert>
                 )}
